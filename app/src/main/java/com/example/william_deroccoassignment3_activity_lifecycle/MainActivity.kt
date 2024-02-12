@@ -28,4 +28,22 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         Log.d(TAG, "onResume() called")
     }
+
+    // This method is called when the activity is partially obscured by another activity, but it's still visible (e.g. switching to another activity)
+    override fun onPause() {
+        super.onPause()
+        Log.d(TAG, "onPause() called")
+    }
+
+    // This method is called when the activity is no longer visible to the user.
+    override fun onStop() {
+        super.onStop()
+        Log.d(TAG, "onStop() called")
+    }
+
+    // This method is called when the activity is being destroyed and removed from memory.
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d(TAG, "onDestroy() called")
+    }
 }
