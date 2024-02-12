@@ -3,6 +3,9 @@ package com.example.william_deroccoassignment3_activity_lifecycle
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +18,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         Log.d(TAG, "onCreate() called")
+
+        val button: Button = findViewById(R.id.button)
+        val textView: TextView = findViewById(R.id.textView)
+        val editText: EditText = findViewById(R.id.editText)
+
+        button.setOnClickListener {
+            textView.text = "Hello"
+            editText.setText("Hello")
+        }
     }
 
     // This method is called when the activity becomes visible to the user but is not yet in the foreground.
