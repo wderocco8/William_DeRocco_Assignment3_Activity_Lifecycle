@@ -18,6 +18,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     // This method is called when the activity becomes visible to the user but is not yet in the foreground.
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(TAG, "onRestart() called")
+    }
+
+    // This method is called when the activity becomes visible to the user but is not yet in the foreground.
     override fun onStart() {
         super.onStart()
         Log.d(TAG, "onStart() called")
